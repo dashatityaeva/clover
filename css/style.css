@@ -555,9 +555,6 @@ blockquote {
   .bottom {
     display: none;
   }
-  .hov {
-    display: none;
-  }
   .btn {
     font-size: 15px;
   }
@@ -772,6 +769,7 @@ blockquote {
   }
   .header__link {
     color: #fff;
+    -webkit-text-fill-color: #fff;
   }
   .header__item {
     margin-right: 0;
@@ -794,7 +792,7 @@ blockquote {
         justify-content: space-around;
     top: 0;
     left: 0;
-    background-color: #6d6d6d;
+    background-color: #808080;
     width: 100%;
     height: 100vh;
     z-index: 4;
