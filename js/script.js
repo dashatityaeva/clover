@@ -10,7 +10,15 @@ let toggleMenu = function () {
 }
 menuMob.addEventListener('click', toggleMenu);
 
+//===фикс моб меню
+let headerMenuList = document.querySelector('.header__list');
 
+headerMenuList.addEventListener('click', function(e) {
+  let target = e.target;
+  if (target.tagName === 'A') {
+    toggleMenu();
+  }
+})
 
 
 
