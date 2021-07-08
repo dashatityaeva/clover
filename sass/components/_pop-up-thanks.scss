@@ -1,0 +1,31 @@
+.thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    span {
+        @include rm();
+        font-size: 23px;
+        line-height: 1.304;
+        color: #484848;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .btn_fill {
+        width: 150px;
+    }
+}
+
+
+@media (max-width:500px) {
+    .thanks {
+        span {
+            font-size: 17px;
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.footer {
+    padding: 60px 0;
+    background-color: #505050;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__polity {
+        @include rr();
+        font-size: 17px;
+        line-height: 1.47;
+        color: #ffffff;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        min-width: 290px;
+        padding-right: 20px;
+        margin-bottom: 35px;
+    }
+
+    &__col-name {
+        @include rr();
+        font-size: 17px;
+        color: rgb(185, 185, 185);
+        line-height: 2.059;
+        margin-bottom: 15px;
+    }
+
+    &__logo-wrap {
+        max-height: 68px;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        @include rr();
+        font-size: 17px;
+        color: #ffffff;
+        line-height: 2.059;
+    }
+
+    &__phone-wrap {
+        position: relative;
+        padding-left: 25px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0px;
+            width: 19px;
+            height: 17px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../img/footer/phone.png);
+        }
+    }
+
+    &__mail-wrap {
+        position: relative;
+        padding-left: 25px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0px;
+            width: 19px;
+            height: 17px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../img/footer/mail.png);
+
+        }
+    }
+
+    &__phone,
+    &__mail,
+    &__address {
+        @include rr();
+        font-size: 17px;
+        color: #ffffff;
+        line-height: 1.47;
+    }
+
+    &__address {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    &__insta-wrap {
+        position: relative;
+        padding-left: 25px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0px;
+            width: 19px;
+            height: 17px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../img/footer/instagram-logo.png);
+
+        }
+    }
+
+    &__insta {
+        color: #5b92ff;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        &__wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__col {
+            text-align: center;
+            padding-right: 0;
+            width: auto;
+            min-width: 0;
+        }
+
+        &__phone-wrap,
+        &__mail-wrap,
+        &__insta-wrap {
+            display: flex;
+            align-self: center;
+            padding-left: 30px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+
+        &__phone,
+        &__mail,
+        &__address,
+        &__polity,
+        &__link {
+            font-size: 15px;
+        }
+    }
+}

@@ -1,0 +1,236 @@
+.ceo {
+    padding: 50px 0 100px 0;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        width: 50%;
+        padding-left: 100px;
+        padding-right: 50px;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-image: url(../img/banner-bg.png);
+            background-repeat: no-repeat;
+            width: 40%;
+            height: 57%;
+            position: absolute;
+            top: 15px;
+            left: 0%;
+            z-index: -1;
+        }
+    }
+
+    &__title {
+        @include rb();
+        font-size: 30px;
+        color: #2a2a2a;
+        line-height: 1.32;
+        max-width: 550px;
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -50px;
+            width: 100px;
+            height: 5px;
+            background-color: #60bd5e;
+        }
+    }
+
+    &__descr {
+        @include pb();
+        font-size: 24px;
+        color: #8f8f8f;
+        line-height: 1.584;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        p {
+            color: #484848;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__info {
+        margin-top: -50px;
+        width: 50%;
+        position: relative;
+
+        &:before {
+            content: '';
+            background-image: url(../img/banner-bg.png);
+            // background-repeat: no-repeat;
+            // background-size: 120px 120px;
+            width: 75%;
+            height: 50%;
+            position: absolute;
+            bottom: 55px;
+            right: 0;
+            z-index: -1;
+
+        }
+    }
+
+    &__accent {
+        position: absolute;
+        top: 13%;
+        left: 14%;
+
+        @include rb();
+        font-size: 90px;
+        color: #f1f1f1;
+        text-transform: uppercase;
+        line-height: 1.052;
+        z-index: -1;
+    }
+
+    &__img {
+        height: 100%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &__about {
+        position: absolute;
+        bottom: 0;
+        left: 14%;
+        @include pb();
+        font-size: 24px;
+        line-height: 1.58;
+        color: #000000;
+
+        &:after {
+            content: '';
+            background-image: url(../img/signature.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 105%;
+            width: 124px;
+            height: 100%;
+        }
+    }
+
+    &__position {
+        color: #868686;
+    }
+
+}
+
+@media (max-width: 1440px) {
+    .ceo {
+        &__content {
+            width: 60%;
+            padding-left: 50px;
+            padding-right: 20px;
+        }
+
+        &__accent {
+            font-size: 70px;
+        }
+
+        &__info {
+            width: 40%;
+        }
+
+        &__about {
+            &:after {
+                left: auto;
+                top: auto;
+                right: 0;
+                bottom: -76px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .ceo {
+        &__wrap {
+            align-items: flex-end;
+        }
+
+        &__accent {
+            display: none;
+        }
+
+        &__about {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .ceo {
+
+        &__content,
+        &__info {
+            width: 100%;
+        }
+
+        &__info {
+            margin-top: -130px;
+        }
+
+        &__text {
+            p {
+                &:last-child {
+                    width: 58%;
+                }
+            }
+        }
+
+        &__img {
+            margin: 0;
+            margin-left: auto;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .ceo {
+        &__title {
+            font-size: 22px;
+        }
+
+        &__descr {
+            font-size: 18px;
+        }
+
+        &__about {
+            font-size: 18px;
+        }
+
+        &__content {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        &__img {
+            max-height: 245px;
+        }
+        &__text {
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

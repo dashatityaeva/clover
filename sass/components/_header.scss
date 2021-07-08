@@ -1,0 +1,207 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right, #f1f1f1 38%, rgb(255, 255, 255) 0%);
+
+    &__wrap {
+        display: flex;
+        padding: 25px 0;
+    }
+
+    &__gr {
+        width: 35%;
+    }
+
+    &__wt {
+        width: 65%;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo-wrap {
+        margin-left: auto;
+        max-height: 68px;
+        background-color: #f1f1f1;
+
+    }
+
+    &__content {
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        padding-left: 70px;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
+
+    &__link {
+        @include rr();
+        font-size: 17px;
+        color: #272727;
+        line-height: 2.059;
+    }
+    &__insta-wrap {
+        display: none;
+        position: relative;
+        padding-left: 25px;
+        margin: auto;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0px;
+            width: 19px;
+            height: 17px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url(../img/footer/instagram-logo.png);
+
+        }
+    }
+
+    &__insta {
+        color: #5b92ff;
+    }
+    &__phone {
+        @include pb();
+        font-size: 25px;
+        color: #000000;
+        line-height: 1.584;
+    }
+
+    .menu-mb {
+        display: none;
+
+        align-items: center;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    .menu-mb>span,
+    .menu-mb>span:before,
+    .menu-mb>span:after {
+        display: flex;
+        position: absolute;
+        left: 0;
+        height: 3px;
+        background-color: #60bd5e;
+        width: 100%;
+        transition-duration: .3s;
+        z-index: 5;
+    }
+
+    .menu-mb>span:before {
+        content: '';
+        top: -10px;
+    }
+
+    .menu-mb>span:after {
+        content: '';
+        top: 10px;
+    }
+
+    .menu-mp--open>span {
+        transform: rotate(45deg);
+    }
+
+    .menu-mp--open>span:before {
+        top: 0;
+        opacity: 0;
+    }
+
+    .menu-mp--open>span:after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+}
+@media (max-width: 1440px) {
+    .header {
+        &__content {
+            padding-left: 0;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .header {
+        .menu-mb {
+            display: flex;
+        }
+        &__content {
+            justify-content: flex-end;
+        }
+        &__phone {
+            margin-right: 50px;
+        }
+        &__list {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 100px;
+        }
+        &__link {
+            color: #fff;
+        }
+        &__item {
+            margin-right: 0;
+            margin-bottom: 20px;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+        &__insta-wrap {
+            display: block;
+        }
+        &__nav {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: space-around;
+            top: 0;
+            left: 0;
+            // background-color: #f1f1f1;
+            background-color: #6d6d6d;
+            width: 100%;
+            height: 100vh;
+            z-index: 4;
+            &_active {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        &__phone {
+            font-size: 13px;
+            margin-right: 20px;
+        }
+    }
+}
