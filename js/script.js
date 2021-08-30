@@ -6,7 +6,9 @@ let headerMenu = document.querySelector('.header__nav');
 let toggleMenu = function () {
   headerMenu.classList.toggle('header__nav_active');
   menuMob.classList.toggle('menu-mp--open');
-  document.body.classList.toggle('hidden');
+  if (window.innerWidth <= 1100) {
+    document.body.classList.toggle('hidden');
+  }
 }
 menuMob.addEventListener('click', toggleMenu);
 
